@@ -491,7 +491,7 @@ int main(int argc, char* argv[])
 	namedWindow("TILT");
 
 	// Грузим изображение
-	img_c=imread("building3.jpg",1);
+	img_c=imread(argv[1],1);
 
 	// Ввод точек области
 	imshow("Исходное изображение", img_c);
@@ -540,7 +540,7 @@ int main(int argc, char* argv[])
 	vector<Point2f> region_tau(4);
 	transformPts(region,Tau,region_tau);
 
-	Mat banner=imread("E:\\ImagesForTest\\myface.jpg");
+	Mat banner=imread(argv[2]);
 
 	int w=fabs(region[0].x-region[2].x);
 	int h=fabs(region[0].y-region[2].y);
